@@ -23,7 +23,8 @@ This command gives you control over Roomba turning on the cliff, wheel-drop and 
 void startSafe()
 {  
   Roomba.write(128);  //Start
-  Roomba.write(131);  //Safe mode
+  delay(50);
+  Roomba.write(131);  //Safe mode is identical to the Control command (130)
   delay(1000);
 }
 
@@ -32,6 +33,7 @@ This command gives you complete control over Roomba by putting the OI into Full 
 void startFull()
 {  
   Roomba.write(128);  //Start
+  delay(50);
   Roomba.write(132);  //Full mode
   delay(1000);
 }
